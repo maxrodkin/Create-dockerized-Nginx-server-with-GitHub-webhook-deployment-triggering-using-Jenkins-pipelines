@@ -10,7 +10,7 @@ node {
 TmZAbhxtzqe3FOrcuSwxDnY+9/IwYJqRuqT9BrLb aws-mr-nginx-lua-6"
         sh "docker-machine env aws-mr-nginx-lua-6"
         sh "eval \$(docker-machine env aws-mr-nginx-lua-6)"
-        sh "docker run maxi4/maxrodkin:for_aws_1"
+        sh "docker run -d -p 80:80 maxi4/maxrodkin:for_aws_1"
         // Clean up workspace
         step([$class: 'WsCleanup'])
         }
